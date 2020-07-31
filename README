@@ -1,0 +1,18 @@
+URL formulierpagina: http://compaan.funxys.com/form
+
+URL resultatenpagina: http://compaan.funxys.com/results
+
+Credentials: compaan : kenau1
+
+
+Funxys.com is een eigen domein zonder ssl-certificaat dat ik eigenlijk alleen maar gebruik voor tijdelijke oplossingen.
+
+Ik twijfelde erg of ik er een mini-Symfony-project van zou maken en heb zelfs ook nog gekeken naar Express, gehost via Heroku.
+Probleem met Symfony is dat mijn huidige hostingcontract me niet genoeg rechten op de server geeft daarvoor (voor mijn project in Zend Framework volstaat het)
+en ik vond het toch prettiger om mijn eigen hostingomgeving te gebruiken, omdat Heroku (hoewel het er erg simpel in gebruik uitziet) toch nog niet bekend genoeg is.
+
+Ik heb er uiteindelijk voor gekozen om een zelf geschreven PHP micro-MVC-framework te gebruiken. Daarbij heb ik dus een beetje code gekopieerd van ht project eurostream2020.com eerder dit jaar. In Symfony zouden bepaalde zaken netter gedaan worden, omdat dat onderdeel is van het framework, maar ik durf het wel aan om jullie dit zo te presenteren omdat het behalve inzicht in hoe ik dit specifieke probleem op zou lossen, ook een algemeen beeld geeft van hoe ik een dergelijk mini-framework zou aanpakken. Het is in ieder geval erg lightweight en portable op deze manier.
+
+Groet,
+
+Ben
