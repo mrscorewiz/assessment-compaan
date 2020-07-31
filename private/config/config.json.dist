@@ -1,0 +1,10 @@
+{
+    "db" : {
+        "main" : {
+            "user" : "dbuser",
+            "name" : "dbname",
+            "pass" : "dbpass",
+            "host" : "localhost"
+        }
+    }
+}

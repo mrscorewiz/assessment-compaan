@@ -1,0 +1,22 @@
+<?php include __DIR__ . '/partials/head.phtml' ?>
+
+        <main>
+            Vriendelijk bedankt voor uw medewerking!
+        </main>
+
+        <script>
+
+            function flash(messages) {
+                let message = message.join('\n');
+                alert('Er is iets mis gegaan:\n\n' + message);
+            }
+
+            <?php if (!empty($data->errors) && count($data->errors)): ?>
+
+                flash(JSON.parse(`<?= \json_encode($data->errors) ?>`));
+
+            <?php endif ?>
+
+        </script>
+
+<?php include __DIR__ . '/partials/foot.phtml' ?>

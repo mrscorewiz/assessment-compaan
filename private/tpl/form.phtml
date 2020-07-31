@@ -1,0 +1,35 @@
+<?php include __DIR__ . '/partials/head.phtml' ?>
+
+        <main>
+            <form method="post">
+                <div>
+                    <p>Met welk cijfer beoordeelt u ons product?</p>
+
+                    <p>
+                        <select name="mark">
+                        <?php foreach (range(0, 10) as $mark): ?>
+                            <option value="<?= $mark ?>"<?= !empty($this->data->mark) && $this->data->mark == $mark ? ' selected' : '' ?>>
+                                <?= $mark > 0 ? $mark : '' ?>
+                            </option>
+                        <?php endforeach; ?>
+                        </select>
+                    </p>
+                </div>
+
+                <div>
+                    <p>Heeft u nog suggesties?</p>
+
+                    <p><textarea cols="100" rows="10" name="comment"><?php if (!empty($this->data->comment)): echo $this->data->comment; endif; ?></textarea></p>
+                </div>
+
+                <div>
+                    <input type="submit" value="Versturen">
+                </div>
+
+                <input type="hidden" name="csrf" value="<?= $this->data->csrf ?>">
+            </form>
+        </main>
+
+<?php include __DIR__ . '/partials/errors.phtml' ?>
+
+<?php include __DIR__ . '/partials/foot.phtml' ?>

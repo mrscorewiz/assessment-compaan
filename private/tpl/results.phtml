@@ -1,0 +1,22 @@
+<?php include __DIR__ . '/partials/head.phtml' ?>
+
+    <main>
+
+        <table>
+            <tr>
+                <th>Datum/tijd</th>
+                <th>Cijfer</th>
+                <th cols="2">Opmerkingen</th>
+            </tr>
+    <?php foreach ($this->data as $row): ?>
+            <tr>
+                <td><?= $row->datetime ?></td>
+                <td><?= $row->mark ?></td>
+                <td><?= $row->comment ?></td>
+            </tr>
+    <?php endforeach; ?>
+        </table>
+
+    </main>
+
+<?php include __DIR__ . '/partials/foot.phtml' ?>

@@ -1,0 +1,26 @@
+<?php include __DIR__ . '/partials/head.phtml' ?>
+
+        <main>
+            <form method="post">
+                <div>
+                    <table>
+                        <tr>
+                            <td>Gebruikersnaam</tr>
+                            <td><input type="text" name="user"></td>
+                        </tr>
+                        <tr>
+                            <td>Wachtwoord</tr>
+                            <td><input type="password" name="password"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div>
+                    <input type="submit" value="Inloggen">
+                </div>
+            </form>
+        </main>
+
+<?php include __DIR__ . '/partials/errors.phtml' ?>
+
+<?php include __DIR__ . '/partials/foot.phtml' ?>

@@ -1,0 +1,15 @@
+       <script>
+
+            function flash(messages) {
+                let message = messages.join('\n');
+                alert('Er is iets mis gegaan:\n\n' + message);
+            }
+
+            <?php if (!empty($this->errors) && count($this->errors)): ?>
+
+                setTimeout(() => flash(JSON.parse(`<?= \json_encode($this->errors) ?>`)), 500);
+
+            <?php endif ?>
+
+        </script>
+
