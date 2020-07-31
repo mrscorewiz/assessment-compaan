@@ -16,10 +16,12 @@ class FormHandler extends \Frame\Service {
     {
         $ok = (bool) ($data->csrf && count($this->db->query('SELECT * FROM `' . $this->csrfTable . '` WHERE `token` = ?', [$data->csrf])));
 
+        $comment = \strip_tags($data->comment ?? '');
+
         if ($ok) {
             $this->db->insert($this->resultsTable, [
                 'mark' => (int) $data->mark,
-                'comment' => $data->comment ?? '',
+                'comment' => $comment,
                 'datetime' => date('Y-m-d H:i:s'),
                 'ip' => $_SERVER['REMOTE_ADDR'],
             ]);
