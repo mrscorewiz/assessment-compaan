@@ -1,5 +1,6 @@
 <?php
     session_start();
+    session_set_cookie_params(['httponly' => true]);
 
     require_once __DIR__ . '/../private/base.php';
 
